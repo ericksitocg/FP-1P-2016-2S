@@ -21,7 +21,7 @@ for palabra in L_pal:
                 contador_vocales+=1
             elif letra in L_consonantes:
                 contador_consonantes+=1
-        if contador_vocales==contador_consonantes:
+        if contador_vocales==contador_consonantes and contador_vocales!=0:
             contador_palabra+=1
 
 print("el texto tiene %d palabras"%contador_palabra)

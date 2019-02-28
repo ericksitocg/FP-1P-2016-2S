@@ -13,15 +13,15 @@ texto = texto.replace("."," ")
 
 L_pal = texto.split(" ")
 for palabra in L_pal:
-    contador_vocales = 0
-    contador_consonantes = 0
-    if palabra != "":#Caso especial cuando termina en punto el split crea un caracter vacio el cual debe ser validado
-        for letra in palabra:
-            if letra in L_vocales:
-                contador_vocales+=1
-            elif letra in L_consonantes:
-                contador_consonantes+=1
-        if contador_vocales==contador_consonantes and contador_vocales!=0:
-            contador_palabra+=1
+	contador_vocales = 0
+	contador_consonantes = 0
+
+	for letra in palabra:
+		if letra in L_vocales:
+			contador_vocales+=1
+		elif letra in L_consonantes:
+			contador_consonantes+=1
+	if contador_vocales==contador_consonantes and contador_vocales!=0:
+		contador_palabra+=1
 
 print("el texto tiene %d palabras"%contador_palabra)
